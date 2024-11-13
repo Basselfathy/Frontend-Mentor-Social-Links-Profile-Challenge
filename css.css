@@ -1,0 +1,147 @@
+/***** Variables *****/
+:root {
+    /* Mode 1 */
+    /* color */
+    --color-green: rgb(196 248 42);
+    --color-grey-700: rgb(51 51 51);
+    --color-grey-800: rgb(31 31 31);
+    --color-grey-900: rgb(20 20 20);
+    --color-white: rgb(255 255 255);
+    /* number */
+    --font-size-text-preset-2: 0.875rem;
+    --font-size-text-preset-1: 1.5rem;
+    --fw-b:700;
+    --fw-sb:600;
+    --fw-r:400;
+    --spacing-50: 0.25rem;
+    --spacing-100: 0.5rem;
+    --spacing-150: 0.75rem;
+    --spacing-200: 1rem;
+    --spacing-300: 1.5rem;
+    --spacing-400: 2rem;
+    --spacing-500: 2.5rem;
+}
+
+
+/***** resets *****/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    font-size: var(--font-size-text-preset-2);
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-grey-900);
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  li{
+    list-style: none;
+  }
+
+
+/***** styles *****/
+
+main{
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  color: var(--color-white);
+  padding-inline: var(--spacing-400);
+}
+
+#social-card{
+  display: grid;
+  justify-self: center;
+  gap: var(--spacing-300);
+  border-radius: var(--spacing-150);
+  background-color: var(--color-grey-800);
+  width: min(100%, 28.5rem);
+  padding: var(--spacing-500);
+  text-align: center;
+}
+
+.user__img{
+  aspect-ratio: 1;
+  width: 5.5rem;
+  border-radius: 50%;
+  justify-self: center;
+}
+
+h1{
+  font-size: var(--font-size-text-preset-1);
+  font-weight: var(--fw-sb);
+}
+
+.user__details_address{
+  font-weight: var(--fw-b);
+  color: var(--color-green);
+}
+
+.user__bio{
+  font-weight: var(--fw-r);
+}
+
+.user__links{
+  display: grid;
+  gap: var(--spacing-200);
+}
+
+.user__links a{
+  text-decoration: none;
+  font-weight: var(--fw-b);
+  color: var(--color-white);
+  padding: var(--spacing-150);
+
+  background-color: var(--color-grey-700);
+  border-radius: var(--spacing-100);
+  transition: 600ms ease-out;
+}
+
+.user__links a:hover{
+  background-color: var(--color-green);
+  color: var(--color-grey-900);
+  transition: 250ms;
+}
+
+.user__links a>i{
+  margin-inline-end: 0.5rem;
+  font-size: 1rem;
+}
+
+.attribution {
+  font-size: var(--font-size-text-preset-2);
+  text-align: center;
+  padding: 1rem;
+}
+.attribution a {
+  color: var(--color-green);
+  text-decoration: none;
+}
